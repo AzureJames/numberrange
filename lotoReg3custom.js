@@ -56,7 +56,7 @@ let colThree = [];
 submitForm.addEventListener("click", () => {
   outputs.innerHTML = "";
   console.log("hi");
-  //submitForm.preventDefault();
+  //submitForm.prevenspanefault();
   firstRegDay = startForm.value-1; 
   lastRegDay = endForm.value;
   console.log(firstRegDay,lastRegDay);
@@ -119,12 +119,12 @@ submitForm.addEventListener("click", () => {
 
     for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
       // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      tboutputs.innerHTML += "<tr>";
-      tboutputs.innerHTML += "<td> " + i + " </td>";
-      tboutputs.innerHTML += "<td> " + occurenceOf[i] + " </td>";
-      tboutputs.innerHTML += "<td> " + occurenceOfCol2[i] +  " </td>";
-      tboutputs.innerHTML += "<td> " + occurenceOfCol3[i] + " </td>";
-      tboutputs.innerHTML += "</tr>";
+      tboutputs.innerHTML += "<p>";
+      tboutputs.innerHTML += "<span> " + i + " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
+      tboutputs.innerHTML += "</p>";
     }
 
 
