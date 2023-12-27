@@ -68,7 +68,7 @@ submitForm.addEventListener("click", () => {
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
-    if(q == firstRegDay){outputs.innerHTML += "<p>Latest time: " + regularData[0].draw_date + " Num days: " + lastRegDay + " First loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == firstRegDay){outputs.innerHTML += "<p>Latest time: " + regularData[0].draw_date + " Number of days: " + lastRegDay + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     console.log(regularData.length);
     stringy = toString(regularData[q].midday_daily);
     colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
@@ -77,7 +77,7 @@ submitForm.addEventListener("click", () => {
     colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
     colTwo.push(regularData[q].evening_daily[1]);
     colThree.push(regularData[q].evening_daily[2]);
-    if(q == lastRegDay-1){outputs.innerHTML += "<p>Farthest time: " + regularData[q].draw_date + " Last loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == lastRegDay-1){outputs.innerHTML += "<p>Farthest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
   }
     //console.log("grpAry",regGroupArray);
 
