@@ -112,10 +112,7 @@ submitForm.addEventListener("click", () => {
 
   //outputs.innerHTML += "<table><tr>"
 
-  thoutputs.innerHTML += "<tr><th>Number: <th>";
-  thoutputs.innerHTML += "<th> COL 1: <th>";
-  thoutputs.innerHTML += "<th> COL 2: <th>";
-  thoutputs.innerHTML += "<th> COL 3: <th></tr>";
+  thoutputs.innerHTML += "<tr><th>Number: Column 1: Column 2: Column 3:<th></tr>";
 
 
 
@@ -123,29 +120,28 @@ submitForm.addEventListener("click", () => {
     for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
       // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
       tboutputs.innerHTML += "<tr>";
-      tboutputs.innerHTML += "<td>" + i + "</td>";
-      tboutputs.innerHTML += "<td>" + occurenceOf[i] + " #" + i + "</td>";
-      tboutputs.innerHTML += "<td>" + occurenceOfCol2[i] + " #" + i + "</td>";
-      tboutputs.innerHTML += "<td>" + occurenceOfCol3[i] + " #" + i + "</td>";
-
+      tboutputs.innerHTML += "<td> " + i + " </td>";
+      tboutputs.innerHTML += "<td> " + occurenceOf[i] + " </td>";
+      tboutputs.innerHTML += "<td> " + occurenceOfCol2[i] +  " </td>";
+      tboutputs.innerHTML += "<td> " + occurenceOfCol3[i] + " </td>";
       tboutputs.innerHTML += "</tr>";
     }
 
 
 
-    outputs.innerHTML += "<h2> COL TWO: </h2>";
-    for(let i=0;i<= 9 ; i++){
-      // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      outputs.innerHTML += "<p>" + occurenceOfCol2[i] + " #" + i + "</p>";
-    }
+    // outputs.innerHTML += "<h2> COL TWO: </h2>";
+    // for(let i=0;i<= 9 ; i++){
+    //   // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+    //   outputs.innerHTML += "<p>" + occurenceOfCol2[i] + " #" + i + "</p>";
+    // }
 
-    outputs.innerHTML += "<h2> COL THREE: </h2>";
-    for(let i=0;i<= 9 ; i++){
-      // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      outputs.innerHTML += "<p>" + occurenceOfCol3[i] + " #" + i + "</p>";
-    }
+    // outputs.innerHTML += "<h2> COL THREE: </h2>";
+    // for(let i=0;i<= 9 ; i++){
+    //   // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+    //   outputs.innerHTML += "<p>" + occurenceOfCol3[i] + " #" + i + "</p>";
+    // }
 
-    console.log("oc",occurenceOf);
+    // console.log("oc",occurenceOf);
 
   //   outputs.innerText += " COL TWO: ";
   // for(let i=0;i< 9 ; i++)
