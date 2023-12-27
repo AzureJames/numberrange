@@ -108,12 +108,31 @@ submitForm.addEventListener("click", () => {
     }
   }
 
+  outputs.innerHTML += "<table><tr>"
 
-  outputs.innerHTML += "<h2> COL ONE: </h2>";
-    for(let i=0;i<= 9 ; i++){
+  outputs.innerHTML += "<th><h2>Number: </h2><th>";
+  outputs.innerHTML += "<th><h2> COL 1: </h2><th>";
+  outputs.innerHTML += "<th><h2> COL 2: </h2><th>";
+  outputs.innerHTML += "<th><h2> COL 3: </h2><th>";
+
+  outputs.innerHTML += "</tr> <tr>"
+
+
+
+    for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
       // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      outputs.innerHTML += "<p>" + occurenceOf[i] + " #" + i + "</p>";
+      outputs.innerHTML += "<tr>"
+      outputs.innerHTML += "<td>" + i + "</td>";
+      outputs.innerHTML += "<td>" + occurenceOf[i] + " #" + i + "</td>";
+      outputs.innerHTML += "<td>" + occurenceOfCol2[i] + " #" + i + "</td>";
+      outputs.innerHTML += "<td>" + occurenceOfCol3[i] + " #" + i + "</td>";
+
+      outputs.innerHTML += "</tr>"
     }
+
+    outputs.innerHTML += "</table>"
+
+
 
     outputs.innerHTML += "<h2> COL TWO: </h2>";
     for(let i=0;i<= 9 ; i++){
