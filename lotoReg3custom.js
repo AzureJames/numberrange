@@ -110,10 +110,10 @@ submitForm.addEventListener("click", () => {
 
   outputs.innerHTML += "<table><tr>"
 
-  outputs.innerHTML += "<th><h2>Number: </h2><th>";
-  outputs.innerHTML += "<th><h2> COL 1: </h2><th>";
-  outputs.innerHTML += "<th><h2> COL 2: </h2><th>";
-  outputs.innerHTML += "<th><h2> COL 3: </h2><th>";
+  outputs.innerHTML += "<th>Number: <th>";
+  outputs.innerHTML += "<th> COL 1: <th>";
+  outputs.innerHTML += "<th> COL 2: <th>";
+  outputs.innerHTML += "<th> COL 3: <th>";
 
   outputs.innerHTML += "</tr> <tr>"
 
