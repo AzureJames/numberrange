@@ -68,7 +68,7 @@ submitForm.addEventListener("click", () => {
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
-    if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p><p>Latest time: " + regularData[0].draw_date  + lastRegDay + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     console.log(regularData.length);
     stringy = toString(regularData[q].midday_daily);
     colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
