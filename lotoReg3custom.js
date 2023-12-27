@@ -55,6 +55,8 @@ let colTwo = [];
 let colThree = [];
 submitForm.addEventListener("click", () => {
   outputs.innerHTML = "";
+  thoutputs.innerHTML = "";
+  tboutputs.innerHTML = "";
   console.log("hi");
   //submitForm.prevenspanefault();
   firstRegDay = startForm.value-1; 
@@ -66,16 +68,16 @@ submitForm.addEventListener("click", () => {
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
-    if(q == firstRegDay){outputs.innerHTML += "<p>Latest time: " + regularData[0].draw_date + " Num days: " + lastRegDay + " First loto numbers:" + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == firstRegDay){outputs.innerHTML += "<p>Latest time: " + regularData[0].draw_date + " Num days: " + lastRegDay + " First loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     console.log(regularData.length);
     stringy = toString(regularData[q].midday_daily);
     colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
     colTwo.push(regularData[q].midday_daily[1]);
     colThree.push(regularData[q].midday_daily[2]);
-    colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA
+    colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
     colTwo.push(regularData[q].evening_daily[1]);
     colThree.push(regularData[q].evening_daily[2]);
-    if(q == lastRegDay-1){outputs.innerHTML += "<p>Farthest time: " + regularData[q].draw_date + "Last loto numbers:" + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == lastRegDay-1){outputs.innerHTML += "<p>Farthest time: " + regularData[q].draw_date + " Last loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
   }
     //console.log("grpAry",regGroupArray);
 
@@ -113,7 +115,7 @@ submitForm.addEventListener("click", () => {
 
   //outputs.innerHTML += "<table><tr>"
 
-  thoutputs.innerHTML += "<tr><th>Number: Column 1: Column 2: Column 3:<th></tr>";
+  thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
 
 
 
