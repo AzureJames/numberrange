@@ -6,7 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3 Numbers</title>
     <style>
-        body { background-color: rgb(209, 172, 221); }
+
+      .neu {
+
+        background-color: rgb(229, 206, 235);
+        border-radius: 40px;
+        box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, .25);
+        display: block;
+        flex: 1;
+        min-height: 500px;
+        max-width: 350px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        padding: 30px;
+      }
+
+        body { 
+          display: flex;
+        justify-content: center;
+          background-color: rgb(197, 160, 210); }
 
         p, h1, h2, label, span { font-family: Verdana, Geneva, Tahoma, sans-serif;}
 
@@ -150,6 +168,7 @@ input:focus ~ .highlight {
     </style>
 </head>
 <body>
+  <div class="neu">
     <h1>3 Number Custom Range</h1>
     <!-- <a href="loto5.html">loto5</a> -->
     <!-- <iframe src="https://www.lotterypost.com/results/ny" width="400" height="400" title="W3Schools Free Online Web Tutorials"></iframe> -->
@@ -166,7 +185,7 @@ input:focus ~ .highlight {
             <tbody id="tbbody">
             </tbody>
         </table>
-
+  </div>
     <script src="lotoReg3custom.js" type="module" defer></script>
 </body>
 </html>
