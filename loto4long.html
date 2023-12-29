@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Numbers</title>
+    <style>
+      .neu {
+
+background-color: rgb(229, 206, 235);
+border-radius: 40px;
+box-shadow: -2px -2px 4px 0px #ffffff, 50px 50px 50px 0px rgba(0, 0, 0, .25);
+display: block;
+flex: 1;
+min-height: 500px;
+max-width: 550px;
+margin-bottom: 25px;
+overflow: hidden;
+padding: 30px;
+}
+
+body { 
+  display: flex;
+justify-content: center;
+ }
+
+p, h1, h2, label, span { font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+.custom-btn {
+width: 130px;
+height: 40px;
+color: #fff;
+border-radius: 5px;
+padding: 10px 25px;
+margin-top: 12px;
+font-family: 'Lato', sans-serif;
+font-weight: 500;
+background: transparent;
+cursor: pointer;
+transition: all 0.3s ease;
+position: relative;
+display: inline-block;
+box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+7px 7px 20px 0px rgba(0,0,0,.1),
+4px 4px 5px 0px rgba(0,0,0,.1);
+outline: none;
+}
+
+.btn-1 {
+background: rgb(6,14,131);
+background: linear-gradient(0deg, rgba(6,14,131,1) 0%, rgba(12,25,180,1) 100%);
+border: none;
+}
+.btn-1:hover {
+background: rgb(0,3,255);
+background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+
+span { font-size: 20px;
+padding-inline: 17px;
+padding-block: 8px;
+}
+
+
+
+
+
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+
+
+input 				{
+font-size:18px;
+padding:10px 10px 10px 5px;
+display:block;
+width:300px;
+border:none;
+border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+font-size:18px;
+font-weight:normal;
+pointer-events:none;
+transition:0.2s ease all; 
+-moz-transition:0.2s ease all; 
+-webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+top:-20px;
+font-size:14px;
+color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+content:'';
+height:2px; 
+width:0;
+bottom:1px; 
+position:absolute;
+background:#5264AE; 
+transition:0.2s ease all; 
+-moz-transition:0.2s ease all; 
+-webkit-transition:0.2s ease all;
+}
+.bar:before {
+left:50%;
+}
+.bar:after {
+right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+position:absolute;
+height:60%; 
+width:100px; 
+top:25%; 
+left:0;
+pointer-events:none;
+opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+-webkit-animation:inputHighlighter 0.3s ease;
+-moz-animation:inputHighlighter 0.3s ease;
+animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+from { background:#5264AE; }
+to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+from { background:#5264AE; }
+to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+from { background:#5264AE; }
+to 	{ width:0; background:transparent; }
+}
+
+
+
+        body { background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <div class="neu">
+        <h1>4 Number Custom Range</h1>
+        <!-- <a href="loto5.html">loto5</a> -->
+        <!-- <iframe src="https://www.lotterypost.com/results/ny" width="400" height="400" title="W3Schools Free Online Web Tutorials"></iframe> -->
+        <p>Enter 1 for newest recorded day, 2 for day before that, etc...</p>
+        <label for="start">Newest day</label> 
+        <input type="text" name="start" id="start" default="1"> 
+        <label for="end">Oldest day</label> 
+        <input type="text" name="end" id="end">  
+        <button id="submit" class="custom-btn btn-1">Calculate</button>
+        <div id="outputs"></div>
+            <table>
+                <thead id="tbhead">
+                </thead>
+                <tbody id="tbbody">
+                </tbody>
+            </table>
+      </div>
+
+
+    <script src="loto4long.js" type="module" defer></script>
+</body>
+</html>
