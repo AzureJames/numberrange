@@ -51,101 +51,30 @@ let colOne = [];
 let colTwo = [];
 let colThree = [];
 let colFour = [];
-for(var q = firstRegDay; q < lastRegDay; q++){ 
-  //console.log(data[i].midday_winning_numbers);
-  if(q == firstRegDay){outputs.innerHTML += "<h2>Latest time: " + regularData[0].draw_date + " Num days: " + lastRegDay + "</h2>";}
-  console.log(regularData.length);
-  stringy = toString(regularData[q].midday_win_4);
-  colOne.push(regularData[q].midday_win_4[0]); //ARRAYS FROM THE RAW DATA
-  colTwo.push(regularData[q].midday_win_4[1]);
-  colThree.push(regularData[q].midday_win_4[2]);
-  colFour.push(regularData[q].midday_win_4[3]);
+// for(var q = firstRegDay; q < lastRegDay; q++){ 
+//   //console.log(data[i].midday_winning_numbers);
+//   if(q == firstRegDay){outputs.innerHTML += "<h2>Latest time: " + regularData[0].draw_date + " Num days: " + lastRegDay + "</h2>";}
+//   console.log(regularData.length);
 
-  colOne.push(regularData[q].evening_win_4[0]); //ARRAYS FROM THE RAW DATA
-  colTwo.push(regularData[q].evening_win_4[1]);
-  colThree.push(regularData[q].evening_win_4[2]);
-  colFour.push(regularData[q].evening_win_4[3]);
-}
+//   stringy = toString(regularData[q].midday_win_4);
+//   if (afternoon.checked == true) {
+//   colOne.push(regularData[q].midday_win_4[0]); //ARRAYS FROM THE RAW DATA
+//   colTwo.push(regularData[q].midday_win_4[1]);
+//   colThree.push(regularData[q].midday_win_4[2]);
+//   colFour.push(regularData[q].midday_win_4[3]);
+//   }
+//   if (night.checked == true) {
+//   colOne.push(regularData[q].evening_win_4[0]); //ARRAYS FROM THE RAW DATA
+//   colTwo.push(regularData[q].evening_win_4[1]);
+//   colThree.push(regularData[q].evening_win_4[2]);
+//   colFour.push(regularData[q].evening_win_4[3]);
+//   }
+// }
   //console.log("grpAry",regGroupArray);
 
  
 
-//TODO: -MAKE 3 ARRAYS AS COLUMNS FIRSTCOL SECONDCOL THIRD WITH 60 INDEXS SET TO 0, IF W=23, && REGGROUPARRAY[0]==W (23), FIRSTCOL[23]++ ((INDEX IS 0BASED))
-//CURRENTLY IT ADDS THINGS UP CORRECTLY IN GENERAL
-//TODO: PAY ATTENTION TO 1ST DAY AND 1ST NIGHT COLS ETC ACCORDING TO ROB
-console.log("OCCURENCES BELOW FOR",q,"LAST DAYS OF REGULARLOTTO DRAWINGS:");
-console.log("Col One:",colOne);
-console.log("Col Two:",colTwo);
-console.log("Col Three:",colThree); //THESE ARE GOOD
-console.log("Col Four:",colFour);
-let occurenceOf = [0,0,0,0,0,0,0,0,0,0,0];
-let occurenceOfCol2 = [0,0,0,0,0,0,0,0,0,0,0];
-let occurenceOfCol3 = [0,0,0,0,0,0,0,0,0,0,0];
-let occurenceOfCol4 = [0,0,0,0,0,0,0,0,0,0,0];
-for(let j = firstRegDay; j < lastRegDay*2; j++) {  //every day add occurences LASTREGDAY*2 = ACTUAL DAYS INSTEAD OF DRAWINGS
-  for(let k = 0; k <= 9; k++) { //digits 1 to 9
-  if(
-    colOne[j] == k
-    ){
-    occurenceOf[k]++;
-  }
-  if(
-    colTwo[j] == k
-    ){
-    occurenceOfCol2[k]++;
-  }
-  if(
-    colThree[j] == k
-    ){
-    occurenceOfCol3[k]++;
-  }
-  if(
-    colFour[j] == k
-    ){
-    occurenceOfCol4[k]++;
-  }
-  }
-}
 
-
-outputs.innerHTML += "<h2> COL ONE: </h2>";
-  for(let i=0;i<= 9 ; i++){
-    // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-    outputs.innerHTML += "<p>" + occurenceOf[i] + " #" + i + "</p>";
-  }
-
-  outputs.innerHTML += "<h2> COL TWO: </h2>";
-  for(let i=0;i<= 9 ; i++){
-    // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-    outputs.innerHTML += "<p>" + occurenceOfCol2[i] + " #" + i + "</p>";
-  }
-
-  outputs.innerHTML += "<h2> COL THREE: </h2>";
-  for(let i=0;i<= 9 ; i++){
-    // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-    outputs.innerHTML += "<p>" + occurenceOfCol3[i] + " #" + i + "</p>";
-  }
-
-  outputs.innerHTML += "<h2> COL FOUR: </h2>";
-  for(let i=0;i<= 9 ; i++){
-    // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-    outputs.innerHTML += "<p>" + occurenceOfCol4[i] + " #" + i + "</p>";
-  }
-
-  console.log("oc",occurenceOf);
-
-//   outputs.innerText += " COL TWO: ";
-// for(let i=0;i< 9 ; i++)
-//   outputs.innerText += colTwo[i] + " #" + i;
-
-//   outputs.innerText += " COL THREE: ";
-// for(let i=0;i< 9 ; i++)
-//   outputs.innerText += colThree[i] + " #" + i;
-
-
-// outputs.innerText += occurenceOfReg;
-// outputs.innerHTML += occurenceOfRegCol2;
-// outputs.innerHTML += occurenceOfRegCol3;
 
 
 
@@ -190,25 +119,26 @@ submitForm.addEventListener("click", () => {
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
-    if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
+    if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest loto numbers: " + regularData[q].midday_win_4 + regularData[q].evening_win_4 + "</p>";}
     console.log(regularData.length);
-    stringy = toString(regularData[q].midday_daily);
+    stringy = toString(regularData[q].midday_win_4);
     console.log(afternoon.checked)
     console.log(night.checked)
-    if (afternoon.checked) {
-      colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
-      colTwo.push(regularData[q].midday_daily[1]);
-      colThree.push(regularData[q].midday_daily[2]);
-      colFour.push(regularData[q].midday_daily[2]);
+    if (afternoon.checked == true) {
+    colOne.push(regularData[q].midday_win_4[0]); //ARRAYS FROM THE RAW DATA
+    colTwo.push(regularData[q].midday_win_4[1]);
+    colThree.push(regularData[q].midday_win_4[2]);
+    colFour.push(regularData[q].midday_win_4[3]);
     }
-    if (night.checked) {
-      colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
-      colTwo.push(regularData[q].evening_daily[1]);
-      colThree.push(regularData[q].evening_daily[2]);
-      colFour.push(regularData[q].evening_daily[2]);
+    if (night.checked == true) {
+    colOne.push(regularData[q].evening_win_4[0]); //ARRAYS FROM THE RAW DATA0
+    colTwo.push(regularData[q].evening_win_4[1]);
+    colThree.push(regularData[q].evening_win_4[2]);
+    colFour.push(regularData[q].evening_win_4[3]);
     }
-    if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
   }
+    if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_win_4 + regularData[q].evening_win_4 + "</p>";}
+  
     //console.log("grpAry",regGroupArray);
 
   
@@ -216,7 +146,7 @@ submitForm.addEventListener("click", () => {
   //TODO: -MAKE 3 ARRAYS AS COLUMNS FIRSTCOL SECONDCOL THIRD WITH 60 INDEXS SET TO 0, IF W=23, && REGGROUPARRAY[0]==W (23), FIRSTCOL[23]++ ((INDEX IS 0BASED))
   //CURRENTLY IT ADDS THINGS UP CORRECTLY IN GENERAL
   //TODO: PAY ATTENTION TO 1ST DAY AND 1ST NIGHT COLS ETC ACCORDING TO ROB
-  console.log("OCCURENCES BELOW FOR",q,"LAST DAYS OF REGULARLOTTO DRAWINGS:");
+  
   console.log("Col One:",colOne);
   console.log("Col Two:",colTwo);
   console.log("Col Three:",colThree); //THESE ARE GOOD
