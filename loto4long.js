@@ -40,6 +40,8 @@ var occurenceOfRegCol2 = createRegOccurencesOf(); //0 to 60
 var occurenceOfRegCol3 = createRegOccurencesOf(); //0 to 60
 let thoutputs = document.getElementById("tbhead");
 let tboutputs = document.getElementById("tbbody");
+let afternoon = document.getElementById("afternoon");
+let night = document.getElementById("night");
 //console.log("1stocc",occurenceOf);
 var regGroupArray = []; //loto data array
 let firstRegDay = 0; //0 is latest
@@ -191,14 +193,20 @@ submitForm.addEventListener("click", () => {
     if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     console.log(regularData.length);
     stringy = toString(regularData[q].midday_daily);
-    colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
-    colTwo.push(regularData[q].midday_daily[1]);
-    colThree.push(regularData[q].midday_daily[2]);
-    colFour.push(regularData[q].midday_daily[2]);
-    colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
-    colTwo.push(regularData[q].evening_daily[1]);
-    colThree.push(regularData[q].evening_daily[2]);
-    colFour.push(regularData[q].evening_daily[2]);
+    console.log(afternoon.checked)
+    console.log(night.checked)
+    if (afternoon.checked) {
+      colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
+      colTwo.push(regularData[q].midday_daily[1]);
+      colThree.push(regularData[q].midday_daily[2]);
+      colFour.push(regularData[q].midday_daily[2]);
+    }
+    if (night.checked) {
+      colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
+      colTwo.push(regularData[q].evening_daily[1]);
+      colThree.push(regularData[q].evening_daily[2]);
+      colFour.push(regularData[q].evening_daily[2]);
+    }
     if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
   }
     //console.log("grpAry",regGroupArray);
