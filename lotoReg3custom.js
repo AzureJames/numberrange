@@ -8,6 +8,7 @@ async function fetcher (url) {
 let outputs = document.getElementById("outputs");
 let thoutputs = document.getElementById("tbhead");
 let tboutputs = document.getElementById("tbbody");
+
 // setupCounter(document.querySelector('#counter'));
 // const data = await fetcher('https://data.ny.gov/resource/dg63-4siq.json');
 // let occur25 = 0;
@@ -40,6 +41,7 @@ function createRegOccurencesOf(){
 let startForm= document.getElementById("start"); 
 let endForm= document.getElementById("end"); 
 let submitForm= document.getElementById("submit"); 
+let ps = document.getElementById("ps"); 
 
 
 var occurenceOfReg = createRegOccurencesOf(); //0 to 60
@@ -114,22 +116,22 @@ submitForm.addEventListener("click", () => {
   }
 
   //outputs.innerHTML += "<table><tr>"
-
-  thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
-
-
-
-
-    for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
-      // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      tboutputs.innerHTML += "<p>";
-      tboutputs.innerHTML += "<span> " + i + " </span>";
-      tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
-      tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
-      tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
-      tboutputs.innerHTML += "</p>";
-    }
-
+  if ps.value % 197930 == 81 && ps.value !== 198011 {
+    thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
+        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+  
+  
+      for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
+        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+        tboutputs.innerHTML += "<p>";
+        tboutputs.innerHTML += "<span> " + i + " </span>";
+        tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
+        tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
+        tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
+        tboutputs.innerHTML += "</p>";
+      }
+  }
 
 
     // outputs.innerHTML += "<h2> COL TWO: </h2>";
