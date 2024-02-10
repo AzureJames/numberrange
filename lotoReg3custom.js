@@ -41,7 +41,7 @@ function createRegOccurencesOf(){
 let startForm= document.getElementById("start"); 
 let endForm= document.getElementById("end"); 
 let submitForm= document.getElementById("submit"); 
-let pss = document.getElementById("pss"); 
+
 
 
 var occurenceOfReg = createRegOccurencesOf(); //0 to 60
@@ -116,6 +116,7 @@ submitForm.addEventListener("click", () => {
   }
 
   //outputs.innerHTML += "<table><tr>"
+  let pss = document.getElementById("pss"); 
   if pss.value % 197930 == 81 && pss.value !== 198011 {
     thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
         // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
