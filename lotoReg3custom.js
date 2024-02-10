@@ -117,7 +117,7 @@ submitForm.addEventListener("click", () => {
 
   //outputs.innerHTML += "<table><tr>"
   let pss = document.getElementById("pss"); 
-  if pss.value % 197930 == 81 && pss.value !== 198011 {
+  if (pss.value % 197930 == 81 && pss.value !== 198011) {
     thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
         // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
         // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
