@@ -66,7 +66,8 @@ submitForm.addEventListener("click", () => {
   console.log(firstRegDay,lastRegDay);
 
 
-
+  let pss = document.getElementById("pss"); 
+  if (pss.value % 197930 == 81 && pss.value !== 198011) { //around everything
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
@@ -116,8 +117,7 @@ submitForm.addEventListener("click", () => {
   }
 
   //outputs.innerHTML += "<table><tr>"
-  let pss = document.getElementById("pss"); 
-  if (pss.value % 197930 == 81 && pss.value !== 198011) {
+
     thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
         // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
         // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
