@@ -8,7 +8,8 @@ async function fetcher (url) {
 let outputs = document.getElementById("outputs");
 let thoutputs = document.getElementById("tbhead");
 let tboutputs = document.getElementById("tbbody");
-
+let afternoon = document.getElementById("afternoon");
+let night = document.getElementById("night");
 // setupCounter(document.querySelector('#counter'));
 // const data = await fetcher('https://data.ny.gov/resource/dg63-4siq.json');
 // let occur25 = 0;
@@ -43,7 +44,6 @@ let endForm= document.getElementById("end");
 let submitForm= document.getElementById("submit"); 
 
 
-
 var occurenceOfReg = createRegOccurencesOf(); //0 to 60
 var occurenceOfRegCol2 = createRegOccurencesOf(); //0 to 60
 var occurenceOfRegCol3 = createRegOccurencesOf(); //0 to 60
@@ -66,20 +66,23 @@ submitForm.addEventListener("click", () => {
   console.log(firstRegDay,lastRegDay);
 
 
-  let pss = document.getElementById("pss"); 
-  if (pss.value % 197930 == 81 && pss.value !== 198011) { //around everything
+
 
   for(var q = firstRegDay; q < lastRegDay; q++){ 
     //console.log(data[i].midday_winning_numbers);
     if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     console.log(regularData.length);
     stringy = toString(regularData[q].midday_daily);
-    colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
-    colTwo.push(regularData[q].midday_daily[1]);
-    colThree.push(regularData[q].midday_daily[2]);
-    colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
-    colTwo.push(regularData[q].evening_daily[1]);
-    colThree.push(regularData[q].evening_daily[2]);
+    if (afternoon.checked == true) {
+      colOne.push(regularData[q].midday_daily[0]); //ARRAYS FROM THE RAW DATA
+      colTwo.push(regularData[q].midday_daily[1]);
+      colThree.push(regularData[q].midday_daily[2]);
+    }
+    if (night.checked == true) {
+      colOne.push(regularData[q].evening_daily[0]); //ARRAYS FROM THE RAW DATA0
+      colTwo.push(regularData[q].evening_daily[1]);
+      colThree.push(regularData[q].evening_daily[2]);
+    }
     if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
   }
     //console.log("grpAry",regGroupArray);
@@ -118,21 +121,21 @@ submitForm.addEventListener("click", () => {
 
   //outputs.innerHTML += "<table><tr>"
 
-    thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
-        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-  
-  
-      for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
-        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-        tboutputs.innerHTML += "<p>";
-        tboutputs.innerHTML += "<span> " + i + " </span>";
-        tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
-        tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
-        tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
-        tboutputs.innerHTML += "</p>";
-      }
-  }
+  thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
+
+
+
+
+    for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
+      // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+      tboutputs.innerHTML += "<p>";
+      tboutputs.innerHTML += "<span> " + i + " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
+      tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
+      tboutputs.innerHTML += "</p>";
+    }
+
 
 
     // outputs.innerHTML += "<h2> COL TWO: </h2>";
