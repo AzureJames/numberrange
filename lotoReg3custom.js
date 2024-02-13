@@ -29,7 +29,7 @@ let night = document.getElementById("night");
 //THIS SECTION FOR REGULAR LOTO 
 
 let pss = document.getElementById("pss"); 
-if (pss.value % 197930 == 81 && pss.value !== 198011) {
+
 
   const regularData = await fetcher('https://data.ny.gov/resource/hsys-3def.json');
 
@@ -60,6 +60,10 @@ if (pss.value % 197930 == 81 && pss.value !== 198011) {
   let colTwo = [];
   let colThree = [];
   submitForm.addEventListener("click", () => {
+
+
+
+    if (pss.value % 197930 == 81 && pss.value !== 198011) {
     outputs.innerHTML = "";
     thoutputs.innerHTML = "";
     tboutputs.innerHTML = "";
@@ -168,7 +172,7 @@ if (pss.value % 197930 == 81 && pss.value !== 198011) {
     // outputs.innerText += occurenceOfReg;
     // outputs.innerHTML += occurenceOfRegCol2;
     // outputs.innerHTML += occurenceOfRegCol3;
+    }
 
   });
 
-}
