@@ -63,7 +63,7 @@ let pss = document.getElementById("pss");
 
 
 
-    if (pss.value % 197930 == 81 && pss.value !== 198011) {
+    //if (pss.value % 197930 == 81 && pss.value !== 198011) {
     outputs.innerHTML = "";
     thoutputs.innerHTML = "";
     tboutputs.innerHTML = "";
@@ -172,7 +172,7 @@ let pss = document.getElementById("pss");
     // outputs.innerText += occurenceOfReg;
     // outputs.innerHTML += occurenceOfRegCol2;
     // outputs.innerHTML += occurenceOfRegCol3;
-    }
+  //}
 
   });
 
