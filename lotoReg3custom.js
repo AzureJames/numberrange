@@ -84,11 +84,11 @@ let pss = document.getElementById("pss");
       stringy = toString(regularData[q].midday_daily);
       if (afternoon.checked == true) {
         if (regularData[q].midday_daily.length == 1) {
-          colOne.push(0); //ARRAYS FROM THE RAW DATA
-          colTwo.push(0);
+          colOne.push("0"); //ARRAYS FROM THE RAW DATA
+          colTwo.push("0");
           colThree.push(regularData[q].midday_daily[0]); }
         if (regularData[q].midday_daily.length == 2) {
-          colOne.push(0); //ARRAYS FROM THE RAW DATA
+          colOne.push("0"); //ARRAYS FROM THE RAW DATA
           colTwo.push(regularData[q].midday_daily[0]);
           colThree.push(regularData[q].midday_daily[1]); }
         if (regularData[q].midday_daily.length == 3) {
@@ -98,11 +98,11 @@ let pss = document.getElementById("pss");
       }
       if (night.checked == true) {
         if (regularData[q].evening_daily.length == 1) {
-            colOne.push(0); //ARRAYS FROM THE RAW DATA0
-          colTwo.push(0);
+            colOne.push("0"); //ARRAYS FROM THE RAW DATA0
+          colTwo.push("0");
           colThree.push(regularData[q].evening_daily[2]); }
         if (regularData[q].evening_daily.length == 2) {
-            colOne.push(0); //ARRAYS FROM THE RAW DATA0
+            colOne.push("0"); //ARRAYS FROM THE RAW DATA0
           colTwo.push(regularData[q].evening_daily[0]);
           colThree.push(regularData[q].evening_daily[1]); }
         if (regularData[q].evening_daily.length == 3) {
