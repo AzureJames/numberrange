@@ -10,6 +10,7 @@ let thoutputs = document.getElementById("tbhead");
 let tboutputs = document.getElementById("tbbody");
 let afternoon = document.getElementById("afternoon");
 let night = document.getElementById("night");
+let totalCount = document.getElementById("totalCount");
 // setupCounter(document.querySelector('#counter'));
 // const data = await fetcher('https://data.ny.gov/resource/dg63-4siq.json');
 // let occur25 = 0;
@@ -131,6 +132,11 @@ let pss = document.getElementById("pss");
 
     thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
 
+    totalCount.innerHTML += colOne.length
+      totalCount.innerHTML += " "
+    totalCount.innerHTML += colTwo.length
+      totalCount.innerHTML += " "
+    totalCount.innerHTML += colThree.length
 
 
 
