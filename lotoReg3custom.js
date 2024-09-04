@@ -94,6 +94,11 @@ let pss = document.getElementById("pss");
       }
       if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest loto numbers: " + regularData[q].midday_daily + regularData[q].evening_daily + "</p>";}
     }
+    colOne = Array.from(colOne, v => v === undefined ? '0' : v);
+    colTwo = Array.from(colTwo, v => v === undefined ? '0' : v);
+    colThree = Array.from(colThree, v => v === undefined ? '0' : v);
+    
+console.log(result);
       //console.log("grpAry",regGroupArray);
 
     
