@@ -98,7 +98,9 @@ let pss = document.getElementById("pss");
     colTwo = Array.from(colTwo, v => v === undefined ? '0' : v);
     colThree = Array.from(colThree, v => v === undefined ? '0' : v);
     
-console.log(result);
+console.log(colOne);
+console.log(colTwo);
+console.log(colThree);
       //console.log("grpAry",regGroupArray);
 
     
