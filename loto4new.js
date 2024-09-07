@@ -235,7 +235,7 @@ submitForm.addEventListener("click", () => {
     for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
       // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
       tboutputs.innerHTML += "<p>";
-      tboutputs.innerHTML += "<span> " + i + " </span>";
+      tboutputs.innerHTML += "<span><b> " + i + " </b></span>";
       tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
       tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
       tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
