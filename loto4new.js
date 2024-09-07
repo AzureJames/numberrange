@@ -154,7 +154,7 @@ submitForm.addEventListener("click", () => {
 
     }
     if (night.checked == true) {
-      switch regularData[q].midday_win_4.length {
+      switch (regularData[q].midday_win_4.length) {
         case 1:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
