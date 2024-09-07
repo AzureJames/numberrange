@@ -125,7 +125,7 @@ submitForm.addEventListener("click", () => {
     console.log(afternoon.checked)
     console.log(night.checked)
     if (afternoon.checked == true) {
-      switch regularData[q].midday_win_4.length {
+      switch (regularData[q].midday_win_4.length) {
         1:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
