@@ -126,25 +126,25 @@ submitForm.addEventListener("click", () => {
     console.log(night.checked)
     if (afternoon.checked == true) {
       switch (regularData[q].midday_win_4.length) {
-        1:
+        case 1:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
           colThree.push("0");
           colFour.push(regularData[q].midday_win_4[0]);
           break;
-        2:
+        case 2:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
           colThree.push(regularData[q].midday_win_4[0]);
           colFour.push(regularData[q].midday_win_4[1]);
           break;
-        3:
+        case 3:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push(regularData[q].midday_win_4[0]);
           colThree.push(regularData[q].midday_win_4[1]);
           colFour.push(regularData[q].midday_win_4[2]);
           break;
-        4:
+        case 4:
           colOne.push(regularData[q].midday_win_4[0]); //'5' in data would mean three leading zeros
           colTwo.push(regularData[q].midday_win_4[1]);
           colThree.push(regularData[q].midday_win_4[2]);
@@ -155,25 +155,25 @@ submitForm.addEventListener("click", () => {
     }
     if (night.checked == true) {
       switch regularData[q].midday_win_4.length {
-        1:
+        case 1:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
           colThree.push("0");
           colFour.push(regularData[q].evening_win_4[0]);
           break;
-        2:
+        case 2:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push("0");
           colThree.push(regularData[q].evening_win_4[0]);
           colFour.push(regularData[q].evening_win_4[1]);
           break;
-        3:
+        case 3:
           colOne.push("0"); //'5' in data would mean three leading zeros
           colTwo.push(regularData[q].evening_win_4[0]);
           colThree.push(regularData[q].evening_win_4[1]);
           colFour.push(regularData[q].evening_win_4[2]);
           break;
-        4:
+        case 4:
           colOne.push(regularData[q].evening_win_4[0]); //'5' in data would mean three leading zeros
           colTwo.push(regularData[q].evening_win_4[1]);
           colThree.push(regularData[q].evening_win_4[2]);
