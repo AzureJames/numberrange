@@ -112,9 +112,9 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
   console.log(startForm.value)
   console.log(startForm.value)
-  console.log(startForm.value.substring(0,3))
-  console.log(startForm.value.substring(4,5) - 1)
-  console.log(startForm.value.substring(8,9))
+  console.log(startForm.value.substring(0,4))
+  console.log(startForm.value.substring(6,7) - 1)
+  console.log(startForm.value.substring(9,10))
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const firstDate = new Date(startForm.value.substring(0,3), startForm.value.substring(4,5) - 1, startForm.value.substring(8,9));
   console.log(firstDate)
