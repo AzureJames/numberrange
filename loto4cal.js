@@ -13,7 +13,6 @@ let outputs = document.getElementById("outputs");
 //   if(data[i].midday_winning_numbers.match("25") !== null){
 //     occur25++;
 //   }
-
 // }
 // console.log(occur25);
 
