@@ -13,6 +13,7 @@ let outputs = document.getElementById("outputs");
 //   if(data[i].midday_winning_numbers.match("25") !== null){
 //     occur25++;
 //   }
+
 // }
 // console.log(occur25);
 
@@ -111,7 +112,9 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
   console.log(startForm.value)
   console.log(startForm.value)
-  
+  console.log(startForm.value.substring(0,3))
+  console.log(startForm.value.substring(4,5) - 1)
+  console.log(startForm.value.substring(8,9))
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const firstDate = new Date(startForm.value.substring(0,3), startForm.value.substring(4,5) - 1, startForm.value.substring(8,9));
   console.log(firstDate)
