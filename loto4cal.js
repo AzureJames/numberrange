@@ -112,6 +112,18 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
   console.log(startForm.value)
   console.log(startForm.value)
+  jan
+2025-01-08
+2025-01-03
+month -= 1
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const firstDate = new Date(startForm.value.substring(0,3), startForm.value.substring(4,5) - 1, startForm.value.substring(8,9));
+  console.log(firstDate)
+  const secondDate = new Date(endForm.value.substring(0,3), endForm.value.substring(4,5) - 1, endForm.value.substring(8,9));
+  console.log(secondDate)
+  const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  console.log(diffDays)
+
   firstRegDay = startForm.value-1;
   lastRegDay = endForm.value;
   console.log(firstRegDay,lastRegDay);
