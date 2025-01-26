@@ -110,15 +110,22 @@ submitForm.addEventListener("click", () => {
   tboutputs.innerHTML = "";
   console.log("hi");
   //submitForm.prevenspanefault();
+
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  var firstMonth = parseInt(startForm.value.substring(6,8))-1
+  firstMonth = firstMonth.toString()
+  var secondMonth = parseInt(startForm.value.substring(6,8))-1
+  secondMonth = secondMonth.toString()
+
   console.log(startForm.value)
   console.log(startForm.value)
   console.log(startForm.value.substring(0,4))
-  console.log(startForm.value.substring(6,8) - 1)
+  console.log(firstMonth)
   console.log(startForm.value.substring(8,10))
-  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  const firstDate = new Date(startForm.value.substring(0,4), startForm.value.substring(6,8) - 1, startForm.value.substring(8,10));
+
+  const firstDate = new Date(startForm.value.substring(0,4), firstMonth  , startForm.value.substring(8,10));
   console.log(firstDate)
-  const secondDate = new Date(endForm.value.substring(0,4), endForm.value.substring(6,8) - 1, endForm.value.substring(8,10));
+  const secondDate = new Date(endForm.value.substring(0,4), secondMonth, endForm.value.substring(8,10));
   console.log(secondDate)
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   console.log(diffDays)
