@@ -112,10 +112,7 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
   console.log(startForm.value)
   console.log(startForm.value)
-  jan
-2025-01-08
-2025-01-03
-month -= 1
+  
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
   const firstDate = new Date(startForm.value.substring(0,3), startForm.value.substring(4,5) - 1, startForm.value.substring(8,9));
   console.log(firstDate)
