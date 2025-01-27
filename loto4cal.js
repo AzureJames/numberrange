@@ -117,7 +117,7 @@ submitForm.addEventListener("click", () => {
   firstMonth = firstMonth.toString()
   var secondMonth = parseInt(endForm.value.substring(5,7))-1
   secondMonth = secondMonth.toString()
-  var currentMonth = parseInt(currentDay.value.substring(5,7))-1
+  var currentMonth = parseInt(currentDay.substring(5,7))-1
 
   console.log('currentday')
   console.log(currentDay)
