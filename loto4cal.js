@@ -148,7 +148,7 @@ submitForm.addEventListener("click", () => {
   console.log(secondDate)
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   console.log(diffDays)
-  const currentDate = new Date(currentDay.value.substring(0,4), currentMonth, currentDay.value.substring(8,10));
+  const currentDate = new Date(currentDay.substring(0,4), currentMonth, currentDay.substring(8,10));
   const diffBtwOldestAndNow = Math.round(Math.abs((currentDate - secondDate) / oneDay));
 
 
