@@ -117,11 +117,25 @@ submitForm.addEventListener("click", () => {
   var secondMonth = parseInt(endForm.value.substring(6,10))-1
   secondMonth = secondMonth.toString()
 
-  console.log(startForm.value)
+  console.log('startForm.value')
+  console.log('startForm.value.substring(0,4)')
+  console.log('firstMonth')
+  console.log('startForm.value.substring(8,10)')
+
   console.log(startForm.value)
   console.log(startForm.value.substring(0,4))
   console.log(firstMonth)
   console.log(startForm.value.substring(8,10))
+
+  console.log('endForm.value')
+  console.log('endForm.value.substring(0,4)')
+  console.log('secondMonth')
+  console.log('endForm.value.substring(8,10)')
+
+  console.log(endForm.value)
+  console.log(endForm.value.substring(0,4))
+  console.log(secondMonth)
+  console.log(endForm.value.substring(8,10))
 
   const firstDate = new Date(startForm.value.substring(0,4), firstMonth  , startForm.value.substring(8,10));
   console.log(firstDate)
