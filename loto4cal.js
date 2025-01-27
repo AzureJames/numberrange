@@ -153,8 +153,8 @@ submitForm.addEventListener("click", () => {
 
 
 
-  firstRegDay = diffDays  
-  lastRegDay =  diffBtwOldestAndNow /* -1 */
+  firstRegDay = diffBtwOldestAndNow /* -1 */ 
+  lastRegDay = diffDays  
   console.log(firstRegDay,lastRegDay);
 
 
