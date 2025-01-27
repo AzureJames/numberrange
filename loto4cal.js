@@ -112,10 +112,15 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  var currentDay = regularData[0].draw_date.substring(0,10)
   var firstMonth = parseInt(startForm.value.substring(5,7))-1
   firstMonth = firstMonth.toString()
   var secondMonth = parseInt(endForm.value.substring(5,7))-1
   secondMonth = secondMonth.toString()
+  var currentMonth = parseInt(currentDay.value.substring(5,7))-1
+
+  console.log('currentday')
+  console.log(currentDay)
 
   console.log('startForm.value')
   console.log('startForm.value.substring(0,4)')
@@ -143,9 +148,13 @@ submitForm.addEventListener("click", () => {
   console.log(secondDate)
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   console.log(diffDays)
+  const currentDate = new Date(currentDay.value.substring(0,4), currentMonth, currentDay.value.substring(8,10));
+  const diffBtwOldestAndNow = Math.round(Math.abs((currentDate - secondDate) / oneDay));
 
-  firstRegDay = startForm.value-1;
-  lastRegDay = endForm.value;
+diffDays is amount to have, first is oldest
+
+  firstRegDay = diffBtwOldestAndNow /* -1 */
+  lastRegDay = diffDays
   console.log(firstRegDay,lastRegDay);
 
 
