@@ -117,7 +117,7 @@ submitForm.addEventListener("click", () => {
   firstMonth = firstMonth.toString()
   var secondMonth = parseInt(endForm.value.substring(5,7))-1
   secondMonth = secondMonth.toString()
-  var currentMonth = parseInt(currentDay.substring(5,7))-1
+  var currentMonth = parseInt(currentDay.value.substring(5,7))-1
 
   console.log('currentday')
   console.log(currentDay)
@@ -148,13 +148,13 @@ submitForm.addEventListener("click", () => {
   console.log(secondDate)
   const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   console.log(diffDays)
-  const currentDate = new Date(currentDay.substring(0,4), currentMonth, currentDay.substring(8,10));
+  const currentDate = new Date(currentDay.value.substring(0,4), currentMonth, currentDay.value.substring(8,10));
   const diffBtwOldestAndNow = Math.round(Math.abs((currentDate - secondDate) / oneDay));
 
 
 
-  firstRegDay = diffBtwOldestAndNow /* -1 */
-  lastRegDay = diffDays
+  firstRegDay = diffDays  
+  lastRegDay =  diffBtwOldestAndNow /* -1 */
   console.log(firstRegDay,lastRegDay);
 
 
