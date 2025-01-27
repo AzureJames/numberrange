@@ -151,7 +151,7 @@ submitForm.addEventListener("click", () => {
   const currentDate = new Date(currentDay.value.substring(0,4), currentMonth, currentDay.value.substring(8,10));
   const diffBtwOldestAndNow = Math.round(Math.abs((currentDate - secondDate) / oneDay));
 
-diffDays is amount to have, first is oldest
+
 
   firstRegDay = diffBtwOldestAndNow /* -1 */
   lastRegDay = diffDays
