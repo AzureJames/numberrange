@@ -112,9 +112,9 @@ submitForm.addEventListener("click", () => {
   //submitForm.prevenspanefault();
 
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  var firstMonth = parseInt(startForm.value.substring(6,9))-1
+  var firstMonth = parseInt(startForm.value.substring(6,10))-1
   firstMonth = firstMonth.toString()
-  var secondMonth = parseInt(endForm.value.substring(6,9))-1
+  var secondMonth = parseInt(endForm.value.substring(6,10))-1
   secondMonth = secondMonth.toString()
 
   console.log(startForm.value)
