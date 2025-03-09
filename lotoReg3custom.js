@@ -155,7 +155,7 @@ console.log(colThree);
 
     //outputs.innerHTML += "<table><tr>"
 
-    thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3:<th></tr>";
+    thoutputs.innerHTML += "<tr><th>Number: Column 1: Col 2: Col 3: Sum:<th></tr>";
 
     totalCount.innerHTML += colOne.length
       totalCount.innerHTML += " "
@@ -172,8 +172,12 @@ console.log(colThree);
         tboutputs.innerHTML += "<span> " + occurenceOf[i] + " </span>";
         tboutputs.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
         tboutputs.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
-        tboutputs.innerHTML += "</p>";
+        var sum = occurenceOf[i] + occurenceOfCol2[i] + occurenceOfCol3[i];
+        tboutputs.innerHTML += "<b> " + sum + " </b>";
+        tboutputs.innerHTML += "</p>";loto
       }
+
+      
 
 
 
