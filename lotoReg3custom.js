@@ -197,9 +197,15 @@ console.log(colThree);
     totalCount.innerHTML += colThree.length
 
     //Calculate array means
-    const averageCol1 = occurenceOf => occurenceOf.reduce((a, b) => a + b) / occurenceOf.length;
-    const averageCol2 = occurenceOfCol2 => occurenceOfCol2.reduce((a, b) => a + b) / occurenceOfCol2.length;
-    const averageCol3 = occurenceOfCol3 => occurenceOfCol3.reduce((a, b) => a + b) / occurenceOfCol3.length;
+    let averageCol1 = 0;
+    let averageCol2 = 0;
+    let averageCol3 = 0;
+    for (let num of occurenceOf){ averageCol1 += num; }
+    averageCol1 /= occurenceOf.length;
+    for (let num of occurenceOfCol2){ averageCol2 += num; }
+    averageCol2 /= occurenceOfCol2.length;
+    for (let num of occurenceOfCol3){ averageCol3 += num; }
+    averageCol3 /= occurenceOfCol3.length;
 
       for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
         // DISPLAY BLANK IF NOT WITHIN 2.5 OF THAT MEAN 
