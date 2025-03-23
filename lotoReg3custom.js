@@ -158,7 +158,7 @@ console.log(colThree);
       }
     }
 
-    //outputs.innerHTML += "<table><tr>"
+    //DISPLAY STANDARD OUTPUT
 
     thoutputs.innerHTML += "<tr><th>Number: Col 1: Col 2: Col 3: Sum:<th></tr>";
 
@@ -196,13 +196,17 @@ console.log(colThree);
       totalCount.innerHTML += " "
     totalCount.innerHTML += colThree.length
 
-
+    //Calculate array means
+    const averageCol1 = occurenceOf => occurenceOf.reduce((a, b) => a + b) / occurenceOf.length;
+    const averageCol2 = occurenceOfCol2 => occurenceOfCol2.reduce((a, b) => a + b) / occurenceOfCol2.length;
+    const averageCol3 = occurenceOfCol3 => occurenceOfCol3.reduce((a, b) => a + b) / occurenceOfCol3.length;
 
       for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
-        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+        // DISPLAY BLANK IF NOT WITHIN 2.5 OF THAT MEAN 
         tboutputsNormed.innerHTML += "<p>";
         tboutputsNormed.innerHTML += "<span style='color:purple' > " + i + " </span>";
-        tboutputsNormed.innerHTML += "<span> " + occurenceOf[i] + " </span>";
+        if (occurenceOf[i] > averageCol1 - 3 or occurenceOf[i] < averageCol1 + 3){tboutputsNormed.innerHTML += "<span> " + occurenceOf[i] + " </span>";}
+        else {tboutputsNormed.innerHTML += "<span>  </span>";}
         tboutputsNormed.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
         tboutputsNormed.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
         var sum = occurenceOf[i] + occurenceOfCol2[i] + occurenceOfCol3[i];
