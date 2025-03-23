@@ -8,6 +8,11 @@ async function fetcher (url) {
 let outputs = document.getElementById("outputs");
 let thoutputs = document.getElementById("tbhead");
 let tboutputs = document.getElementById("tbbody");
+
+let outputsNormed = document.getElementById("outputsNormed");
+let thoutputsNormed = document.getElementById("tbheadNormed");
+let tboutputsNormed = document.getElementById("tbbodyNormed");
+
 let afternoon = document.getElementById("afternoon");
 let night = document.getElementById("night");
 let totalCount = document.getElementById("totalCount");
@@ -180,34 +185,32 @@ console.log(colThree);
       
 
 
+    //DISPLAY NORMED OUTPUT AROUND 2.5 OF THE MEAN
+    
+    thoutputsNormed.innerHTML += "<h2>Normed around 2.5 of the center</h2>";
+    thoutputsNormed.innerHTML += "<tr><th>Number: Col 1: Col 2: Col 3: Sum:<th></tr>";
 
-      // outputs.innerHTML += "<h2> COL TWO: </h2>";
-      // for(let i=0;i<= 9 ; i++){
-      //   // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      //   outputs.innerHTML += "<p>" + occurenceOfCol2[i] + " #" + i + "</p>";
-      // }
-
-      // outputs.innerHTML += "<h2> COL THREE: </h2>";
-      // for(let i=0;i<= 9 ; i++){
-      //   // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
-      //   outputs.innerHTML += "<p>" + occurenceOfCol3[i] + " #" + i + "</p>";
-      // }
-
-      // console.log("oc",occurenceOf);
-
-    //   outputs.innerText += " COL TWO: ";
-    // for(let i=0;i< 9 ; i++)
-    //   outputs.innerText += colTwo[i] + " #" + i;
-
-    //   outputs.innerText += " COL THREE: ";
-    // for(let i=0;i< 9 ; i++)
-    //   outputs.innerText += colThree[i] + " #" + i;
+    totalCount.innerHTML += colOne.length
+      totalCount.innerHTML += " "
+    totalCount.innerHTML += colTwo.length
+      totalCount.innerHTML += " "
+    totalCount.innerHTML += colThree.length
 
 
-    // outputs.innerText += occurenceOfReg;
-    // outputs.innerHTML += occurenceOfRegCol2;
-    // outputs.innerHTML += occurenceOfRegCol3;
-  //}
+
+      for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
+        // outputs.innerHTML += "<p>" + colOne[i] + " #" + i + "</p>";
+        tboutputsNormed.innerHTML += "<p>";
+        tboutputsNormed.innerHTML += "<span style='color:purple' > " + i + " </span>";
+        tboutputsNormed.innerHTML += "<span> " + occurenceOf[i] + " </span>";
+        tboutputsNormed.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
+        tboutputsNormed.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
+        var sum = occurenceOf[i] + occurenceOfCol2[i] + occurenceOfCol3[i];
+        tboutputsNormed.innerHTML += "<b style='color:purple' > " + sum + " </b>";
+        tboutputsNormed.innerHTML += "</p>";
+      }
+
+     
 
   });
 
