@@ -203,12 +203,17 @@ console.log(colThree);
     let averageCol1 = 0;
     let averageCol2 = 0;
     let averageCol3 = 0;
+    let allowedRange = 0;
+    
     for (let num of occurenceOf){ averageCol1 += num; }
     averageCol1 /= occurenceOf.length;
     for (let num of occurenceOfCol2){ averageCol2 += num; }
     averageCol2 /= occurenceOfCol2.length;
     for (let num of occurenceOfCol3){ averageCol3 += num; }
     averageCol3 /= occurenceOfCol3.length;
+
+    allowedRange = (averageCol1 + averageCol2 + averageCol3) / 3;
+    allowedRange = allowedRange * .11; //around 11% in either direction
 
       for(let i=0;i<= 9 ; i++){ //loop a digit and calculate occurence by column 3 times
         // DISPLAY BLANK IF NOT WITHIN 2.5 OF THAT MEAN 
