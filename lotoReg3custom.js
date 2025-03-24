@@ -219,13 +219,13 @@ console.log(colThree);
         // DISPLAY BLANK IF NOT WITHIN 2.5 OF THAT MEAN 
         tboutputsNormed.innerHTML += "<p>";
         tboutputsNormed.innerHTML += "<span style='color:purple' > " + i + " </span>";
-        if (occurenceOf[i] > averageCol1 - 3 && occurenceOf[i] < averageCol1 + 3){tboutputsNormed.innerHTML += "<span> " + occurenceOf[i] + " </span>";}
+        if (occurenceOf[i] > averageCol1 - allowedRange && occurenceOf[i] < averageCol1 + allowedRange){tboutputsNormed.innerHTML += "<span> " + occurenceOf[i] + " </span>";}
         else {tboutputsNormed.innerHTML += "<span>__ </span>";}
 
-        if (occurenceOfCol2[i] > averageCol2 - 3 && occurenceOfCol2[i] < averageCol2 + 3){tboutputsNormed.innerHTML += "<span> " + occurenceOfCol2[i] + " </span>";}
+        if (occurenceOfCol2[i] > averageCol2 - allowedRange && occurenceOfCol2[i] < averageCol2 + allowedRange){tboutputsNormed.innerHTML += "<span> " + occurenceOfCol2[i] + " </span>";}
         else {tboutputsNormed.innerHTML += "<span>__ </span>";}
         
-        if (occurenceOfCol3[i] > averageCol3 - 3 && occurenceOfCol3[i] < averageCol3 + 3){tboutputsNormed.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";}
+        if (occurenceOfCol3[i] > averageCol3 - allowedRange && occurenceOfCol3[i] < averageCol3 + allowedRange){tboutputsNormed.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";}
         else {tboutputsNormed.innerHTML += "<span>__ </span>";}
       //  tboutputsNormed.innerHTML += "<span> " + occurenceOfCol2[i] +  " </span>";
     //    tboutputsNormed.innerHTML += "<span> " + occurenceOfCol3[i] + " </span>";
