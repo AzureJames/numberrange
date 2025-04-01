@@ -87,7 +87,7 @@ let pss = document.getElementById("pss");
 
     for(var q = firstRegDay; q < lastRegDay; q++){ 
       //console.log(data[i].midday_winning_numbers);
-      if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date + " Newest day+evening numbers: " + regularData[q].midday_daily + " "+ regularData[q].evening_daily + "</p>";}
+      if(q == firstRegDay){outputs.innerHTML += "<p>Number of days: </p>" +  lastRegDay + "<p>Latest time: " + regularData[0].draw_date.substring(0,10) + " Newest day+evening numbers: " + regularData[q].midday_daily + " "+ regularData[q].evening_daily + "</p>";}
       console.log(regularData.length);
       stringy = toString(regularData[q].midday_daily);
       if (afternoon.checked == true) {
@@ -118,7 +118,7 @@ let pss = document.getElementById("pss");
           colTwo.push(regularData[q].evening_daily[1]);
           colThree.push(regularData[q].evening_daily[2]); }
       }
-      if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date + " Oldest day+evening numbers: " + regularData[q].midday_daily + " " +  regularData[q].evening_daily + "</p>";}
+      if(q == lastRegDay-1){outputs.innerHTML += "<p>Oldest time: " + regularData[q].draw_date.substring(0,10) + " Oldest day+evening numbers: " + regularData[q].midday_daily + " " +  regularData[q].evening_daily + "</p>";}
     }
     colOne = Array.from(colOne, v => v === undefined ? '0' : v);
     colTwo = Array.from(colTwo, v => v === undefined ? '0' : v);
